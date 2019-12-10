@@ -7,7 +7,8 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
-const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
+const courseInfo = {
+  name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks' },
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true
 };
@@ -71,8 +72,8 @@ let characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  for(let house in arr)
-  houses[house] = arr[house].house;
+  for (let house in arr)
+    houses[house] = arr[house].house;
   return houses;
 };
 
@@ -90,14 +91,26 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   for (let i = 0; i < arr.length; i++) {
-    let values = Object.values(arr[i].children);
+    let values = Object.values(arr);
+    let hasValue = false;
 
-    let val = character
+    values.forEach(value => {
 
-  console.log(arr.length);
- }
-  
+      if (value.name === character) {
+        if (value.children.length > 0) {
+          hasValue = true;
+        }
+        else {
+          return hasValue = false;
+        }
+      }
+    });
+    return hasValue;
+
+  }
+
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -108,7 +121,18 @@ The input and output of this function are the same as the input and output from 
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
-  // Solution code here...
+  const entries = Object.entries(arr);
+  let hasValue = false;
+
+  entries.forEach(entry => {
+    if (entry[1].name === character) {
+      if (entry[1].children.length > 0) {
+        hasValue = true;
+      }
+    }
+  });
+
+  return hasValue;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +142,22 @@ Write a function named totalCharacters that takes in an array and returns the nu
 ------------------------------------------------------------------------------------------------ */
 
 const totalCharacters = (arr) => {
-  // Solution code here...
+  let count = 0;
+
+  const values = Object.values(arr);
+
+  values.forEach(value => {
+    if (value.name !== null) {
+      count++;
+    }
+    if (value.spouse !== null) {
+      count++;
+    }
+    for (let i in value.children) {
+      count++;
+    }
+  });
+  return count;
 };
 
 /* ------------------------------------------------------------------------------------------------
