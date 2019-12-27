@@ -66,7 +66,7 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  const regEx =  /1?\W*([2-9][0-8][0-9])\W*([2-9][0-9]{2})\W*([0-9]{4})(\se?x?t?(\d*))?/;
+  const regEx = /^(\([0-9]{3}\)|[0-9]{3})(\s|\-)?[0-9]{3}(\s|\-)?[0-9]{4}$/;
   if(regEx.test(phoneNumber)) {
     return true;
   } else {
