@@ -58,16 +58,28 @@ Then, write a function named removeElements that takes in an array and a callbac
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
+// describe("Testing challenge 3", () => {
+//   test("It should remove three elements from the array", () => {
+//     expect(
+//       removeElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne)
+//     ).toStrictEqual([1, 2, 3, 4, 5, 6, 7]);
+//     expect(
+//       removeElements([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], removeOne).length
+//     ).toStrictEqual(7);
+//   });
+// });
 
-const removeOne = (num, arr) => {
-  if (num % 3 == 2) {
+const removeOne = (num, index, arr) => {
+  if (num % 3 === 2) {
     arr.pop();
   }
-  // Solution code here...
 };
 
 const removeElements = (arr, callback) => {
-  // Solution code here...
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i], i, arr);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
