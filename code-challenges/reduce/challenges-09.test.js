@@ -87,7 +87,9 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 ------------------------------------------------------------------------------------------------ */
 
 const reversedString = str => {
-  // Solution code here...
+  //use split
+  return str.split('').reduce((a, b) => b + a);
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -179,7 +181,7 @@ const isPrime = value => {
 
 const countPrimeNumbers = arr => {
   return arr.reduce((counter, value) => {
-    if(isPrime(value)) {
+    if (isPrime(value)) {
       counter++;
     }
     return counter;
