@@ -33,7 +33,13 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
+  let counter = 0;
+  input.forEach(arr => {
+    arr.forEach(item => {
+      counter += item;
+    })
+  })
+  return counter;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -125,7 +131,14 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  let shortest = data.reduce ((a, b) => {
+    if(a.name.length < b.name.length) {
+      return a;
+    } else {
+      return b;
+    }
+  })
+  return shortest.name;
 };
 
 /* ------------------------------------------------------------------------------------------------
