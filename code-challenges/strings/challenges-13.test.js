@@ -75,7 +75,13 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  // Solution code here...
+  let arrNew = [];
+  arr.forEach(str => {
+    if(str.includes(target)) {
+      arrNew.push(str);
+    }
+  })
+  return arrNew;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -101,7 +107,11 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  return arr.reduce((a, b) => {
+    let arrResult = b.filter(str => !str.includes('Brook'));
+    a.push(arrResult);
+    return a;
+  }, []);
 };
 
 /* ------------------------------------------------------------------------------------------------
