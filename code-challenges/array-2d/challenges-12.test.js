@@ -109,11 +109,9 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 
 const calculateProduct = (numbers) => {
   let counter = 0;
-  for(let i = 0; i < numbers.length; i++) {
-    for(let y = 0; y < 12; y++) {
-      counter += i;
-    }
-  }
+  numbers.forEach(innerArr => {
+    innerArr.forEach(value => counter += value)
+  })
   return counter;
 };
 
@@ -155,7 +153,7 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
