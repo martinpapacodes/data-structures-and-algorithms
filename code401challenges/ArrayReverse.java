@@ -18,7 +18,7 @@ public class ArrayReverse {
     int[] reverseArray = new int[inputArray.length];
     int counter = 0;
 
-    for(int i = inputArray.length - 1; i > 0; i--) {
+    for(int i = inputArray.length - 1; i >= 0; i--) {
         reverseArray[counter] = inputArray[i];
         counter++;
     }
