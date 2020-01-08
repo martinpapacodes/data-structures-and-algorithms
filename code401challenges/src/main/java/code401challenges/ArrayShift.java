@@ -9,7 +9,7 @@ public class ArrayShift {
         if(arrayToBeShifted.size() % 2 == 0) {
             arrayToBeShifted.add((int) arrayMidPoint, valueToBeAdded);
         } else {
-            arrayToBeShifted.add((int) (arrayMidPoint + .5), valueToBeAdded);
+            arrayToBeShifted.add((int) ((arrayMidPoint + .5) + 1), valueToBeAdded);
         }
         return arrayToBeShifted;
     }
