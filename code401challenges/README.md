@@ -27,7 +27,7 @@ If the size of an array is even, divide the size by 2. If odd, then divide by 2 
 ![Image description](../code401challenges/assets/array-shift.jpg)
 
 ---
-#Code Challenge 3: Binary Search
+# Code Challenge 3: Binary Search
 Search an array for a given key and return its index.
 
 ## Challenge
