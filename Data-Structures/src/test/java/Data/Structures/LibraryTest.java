@@ -11,4 +11,22 @@ public class LibraryTest {
         Library classUnderTest = new Library();
         assertTrue("someLibraryMethod should return 'true'", classUnderTest.someLibraryMethod());
     }
+
+
+    @Test public void testMergeList() {
+        Node listOne = new Node(1);
+        listOne.next = new Node(3);
+        listOne.next = new Node(2);
+
+        Node listTwo = new Node(5);
+        listTwo.next = new Node(9);
+        listTwo.next = new Node(4);
+
+        Node mergeList = LinkedList.mergeList(listOne, listTwo);
+        while (mergeList != null) {
+            System.out.print(mergeList.value + " ");
+            mergeList = mergeList.next;
+        }
+        System.out.println();
+    }
 }
