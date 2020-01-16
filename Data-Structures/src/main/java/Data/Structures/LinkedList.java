@@ -2,6 +2,8 @@ package Data.Structures;
 
 public  class LinkedList {
 
+    public int value;
+    public Node next;
     private Node first;
     private Node last;
 
@@ -23,7 +25,6 @@ public  class LinkedList {
 
     public void addFirst(int item) {
         Node node = new Node(item);
-
 
         if(isEmpty()) {
             first = node;
@@ -61,8 +62,10 @@ public  class LinkedList {
     }
 
     public static Node mergeList(Node nodeOne, Node nodeTwo) {
+
         Node head = null;
         Node result = null;
+
         while(nodeOne != null || nodeTwo != null) {
             int tempValueHolder;
             if(nodeOne == null) {
@@ -71,13 +74,14 @@ public  class LinkedList {
             } else if (nodeTwo == null) {
                 tempValueHolder = nodeOne.value;
                 nodeOne = nodeOne.next;
-            } else if(nodeOne.value <= nodeTwo.value) {
+            } else if (nodeOne.value <= nodeTwo.value) {
                 tempValueHolder = nodeOne.value;
                 nodeOne = nodeOne.next;
             } else {
                 tempValueHolder = nodeTwo.value;
                 nodeTwo = nodeTwo.next;
             }
+
             if(result == null) {
                 result = head = new Node(tempValueHolder);
             } else {

@@ -5,10 +5,24 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.addLast(10);
-        list.addLast(20);
-        list.addLast(30);
-        System.out.println(list.contains(10));
+        Node listOne = new Node(1);
+        listOne.next = new Node(2);
+        listOne.next = new Node(4);
+
+        Node listTwo = new Node(1);
+        listTwo.next = new Node(3);
+        listTwo.next = new Node(4);
+
+
+
+          var mergeList = LinkedList.mergeList(listOne, listTwo);
+
+          while (mergeList != null) {
+            System.out.print(mergeList.value + " ");
+            mergeList = mergeList.next;
+          }
+
+          System.out.println();
+
     }
 }
