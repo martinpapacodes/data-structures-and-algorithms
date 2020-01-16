@@ -1,15 +1,6 @@
 package Data.Structures;
 
-public class LinkedList {
-
-    private class Node {
-        private int value;
-        private Node next;
-
-        public Node(int value) {
-            this.value = value;
-        }
-    }
+public  class LinkedList {
 
     private Node first;
     private Node last;
@@ -67,6 +58,34 @@ public class LinkedList {
 
     public void removeFirst() {
 
+    }
+
+    public static Node mergeList(Node nodeOne, Node nodeTwo) {
+        Node head = null;
+        Node result = null;
+        while(nodeOne != null || nodeTwo != null) {
+            int tempValueHolder;
+            if(nodeOne == null) {
+                tempValueHolder = nodeTwo.value;
+                nodeTwo = nodeTwo.next;
+            } else if (nodeTwo == null) {
+                tempValueHolder = nodeOne.value;
+                nodeOne = nodeOne.next;
+            } else if(nodeOne.value <= nodeTwo.value) {
+                tempValueHolder = nodeOne.value;
+                nodeOne = nodeOne.next;
+            } else {
+                tempValueHolder = nodeTwo.value;
+                nodeTwo = nodeTwo.next;
+            }
+            if(result == null) {
+                result = head = new Node(tempValueHolder);
+            } else {
+                result.next = new Node(tempValueHolder);
+                result = result.next;
+            }
+        }
+        return head;
     }
 
     }
