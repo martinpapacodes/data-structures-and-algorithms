@@ -4,7 +4,5 @@
 package Data.Structures;
 
 public class Library {
-    public boolean someLibraryMethod() {
-        return true;
-    }
+
 }
