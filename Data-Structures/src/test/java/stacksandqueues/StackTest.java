@@ -14,36 +14,38 @@ public class StackTest {
         stackTest.push(2);
         stackTest.push(3);
         stackTest.push(4);
-
-        stackTest.display();
-
-
-
-
+        stackTest.push(5);
     }
 
     @Test
-    public void push() {
+    public void testForSinglePush() {
+        stackTest.push(6);
+        assertEquals(6, stackTest.peek());
+    }
 
+    @Test
+    public void testForMultiplePush() {
 
+    stackTest.push(6);
+    stackTest.push(7);
+    stackTest.push(8);
 
+    assertEquals(8, stackTest.peek());
+    }
+
+    @Test
+    public void testPop() {
+        assertEquals(5, stackTest.pop());
     }
 
     @Test
     public void isEmpty() {
-
+    Stack isEmptyStackTest = new Stack();
+    assertTrue(isEmptyStackTest.isEmpty());
     }
 
     @Test
     public void peek() {
-    assertEquals(4, stackTest.peek());
-    }
-
-    @Test
-    public void pop() {
-    }
-
-    @Test
-    public void display() {
+    assertEquals(5, stackTest.peek());
     }
 }

@@ -30,13 +30,16 @@ public class Stack {
         }
     }
 
-    public void pop() {
+    public int pop() {
+
+        Node temp;
         if (isEmpty()) {
             System.out.println("Stack is empty!");
-            return;
+            return -1;
         }
-
+        temp = top;
         top = top.next;
+        return temp.value;
 
     }
 
