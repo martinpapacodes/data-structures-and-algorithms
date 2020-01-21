@@ -1,5 +1,7 @@
 package stacksandqueues;
 
+import java.util.EmptyStackException;
+
 public class Stack {
 
     private Node top;
@@ -35,7 +37,7 @@ public class Stack {
         Node temp;
         if (isEmpty()) {
             System.out.println("Stack is empty!");
-            return -1;
+            throw new EmptyStackException();
         }
         temp = top;
         top = top.next;
