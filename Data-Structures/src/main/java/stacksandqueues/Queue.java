@@ -23,8 +23,6 @@ public class Queue {
         }
 
 //        if(front == null) {
-
-
     }
 
     public int dequeue() {
@@ -38,6 +36,19 @@ public class Queue {
                 rear = null;
             }
             return temp;
+        }
+    }
+
+    public boolean isEmpty() {
+        return rear == null;
+    }
+
+    public int peek() {
+        if (!isEmpty()) {
+            return front.value;
+        } else {
+            System.out.println("Queue is empty");
+            return -1;
         }
     }
 }
