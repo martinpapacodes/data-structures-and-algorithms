@@ -16,14 +16,28 @@ public class QueueTest {
         queueTest.enqueue(3);
         queueTest.enqueue(4);
         queueTest.enqueue(5);
-//        System.out.println("queueTest.dequeue() = " + queueTest.dequeue());
 
     }
 
     @Test
     public void testEnqueue() {
         queueTest.enqueue(20);
-        System.out.println("quue = " + queueTest.peek());
+
+        String expected = "1 <- 2 <- 3 <- 4 <- 5 <- 20 <- ";
+        String actual = queueTest.display();
+
+        assertEquals(expected, actual);
+
+    }
+    @Test
+    public void testForMultipleEnqueue() {
+        queueTest.enqueue(6);
+        queueTest.enqueue(7);
+        queueTest.enqueue(8);
+
+        String expected = "1 <- 2 <- 3 <- 4 <- 5 <- 6 <- 7 <- 8 <- ";
+        String actual = queueTest.display();
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -40,7 +54,16 @@ public class QueueTest {
 
         assertEquals(expected, actual);
     }
-    
+    @Test 
+    public void testIsEmptyAfterMultipleDequeues() {
+        queueTest.dequeue();
+        queueTest.dequeue();
+        queueTest.dequeue();
+        queueTest.dequeue();
+        queueTest.dequeue();
+
+        assertTrue(queueTest.isEmpty());
+    }
     @Test 
     public void testIsEmpty() {
         assertFalse(queueTest.isEmpty());

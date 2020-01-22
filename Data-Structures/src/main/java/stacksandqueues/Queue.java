@@ -51,4 +51,22 @@ public class Queue {
             return -1;
         }
     }
+
+    public String display() {
+        String result = "";
+        if (isEmpty()) {
+            System.out.println("Queue is empty");
+        } else {
+            Node temp = front;
+            while (temp != null) {
+//                System.out.printf("%d <- ", temp.value);
+                result += temp.value + " <- ";
+
+
+                temp = temp.next;
+            }
+            System.out.println(" NULL");
+        }
+        return result;
+    }
 }
