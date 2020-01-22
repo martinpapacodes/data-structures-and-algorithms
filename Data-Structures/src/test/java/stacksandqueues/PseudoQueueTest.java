@@ -27,7 +27,8 @@ public class PseudoQueueTest {
 
     @Test
     public void dequeue() {
-        System.out.println("pseudoQueue.dequeue() = " + pseudoQueue.dequeue());
+        pseudoQueue.dequeue();
+        assertEquals(20, pseudoQueue.peek());
 
     }
 }

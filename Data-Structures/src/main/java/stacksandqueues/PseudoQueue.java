@@ -7,7 +7,8 @@ public class PseudoQueue {
 
 
     public void enqueue(int value) {
-        stackOne.push(value);
+
+
 
     }
 
@@ -22,13 +23,14 @@ public class PseudoQueue {
         return stackTwo.peek();
     }
 
-    public int dequeue() {
-        if(stackTwo.isEmpty()) {
-            while(!stackOne.isEmpty()) {
-                stackTwo.push(stackOne.pop());
-            }
+    public void dequeue() {
+        while(!stackOne.isEmpty()) {
+            stackTwo.push(stackOne.pop());
         }
-        return stackTwo.pop();
+
+        while(!stackTwo.isEmpty()) {
+            stackOne.push(stackTwo.pop());
+        }
     }
 
 }
