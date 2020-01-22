@@ -39,6 +39,16 @@ public class StackTest {
     }
 
     @Test
+    public void testIfEmptyAfterMultiplePops() {
+        stackTest.pop();
+        stackTest.pop();
+        stackTest.pop();
+        stackTest.pop();
+        stackTest.pop();
+
+        assertTrue(stackTest.isEmpty());
+    }
+    @Test
     public void isEmpty() {
     Stack isEmptyStackTest = new Stack();
     assertTrue(isEmptyStackTest.isEmpty());
