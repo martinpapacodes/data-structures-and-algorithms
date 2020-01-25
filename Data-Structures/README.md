@@ -5,8 +5,9 @@
 ### Lab 05: Linked List Implementation 
 
 #### Singly Linked List
-Implement A Singly Linked List
-
+Implement A Singly Linked List (
+[Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/linkedList/LinkedList.java)
+)
 #### Challenge
 
     Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
@@ -33,8 +34,9 @@ Implement A Singly Linked List
 ### Code Challenge: Class 06 
 
 #### Linked List Insertion
-Linked list insertion
-
+Linked list insertion (
+[Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/linkedList/LinkedList.java)
+)
 #### Challenge
 
     Write the following methods for the Linked List class:
