@@ -5,8 +5,9 @@
 ### Lab 05: Linked List Implementation 
 
 #### Singly Linked List
-Implement A Singly Linked List
-
+Implement A Singly Linked List (
+[Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/linkedList/LinkedList.java)
+)
 #### Challenge
 
     Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
@@ -27,6 +28,30 @@ Implement A Singly Linked List
 * isEmpty()
 * includes(value)
 * indexOf()
+
+---
+
+### Code Challenge: Class 06 
+
+#### Linked List Insertion
+Linked list insertion (
+[Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/linkedList/LinkedList.java)
+)
+#### Challenge
+
+    Write the following methods for the Linked List class:
+    .append(value) which adds a new node with the given value to the end of the list
+    .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+    .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+#### Approach & Efficiency
+* The append() method has an O(N) because it adds to the end of the linked list.
+* The insertBefore(value, newVal) has an O(1) if values are given is to be inserted in the front, otherwise O(N).
+* The insertAfter(value, newVal) has an O(N) because it has to traverse through the list
+
+#### Solution
+
+![whiteboard-image](assets/ll-insertion.jpg)
 
 ---
 ## Stack and Queue
