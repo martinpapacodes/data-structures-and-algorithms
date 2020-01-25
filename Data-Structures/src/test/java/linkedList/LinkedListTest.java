@@ -12,6 +12,9 @@ public class LinkedListTest {
         linkedListTest.insert(1);
         linkedListTest.insert(2);
         linkedListTest.insert(3);
+        linkedListTest.insert(4);
+//        linkedListTest.append(5);
+
     }
     @Test
     public void testIfLinkedListIsEmpty() {
@@ -52,7 +55,25 @@ public class LinkedListTest {
     }
     @Test
     public void testToString() {
-        String expected = "{ 3 } -> { 2 } -> { 1 } -> NULL";
+        String expected = "{ 4 } -> { 3 } -> { 2 } -> { 1 } -> NULL";
+        assertEquals(expected, linkedListTest.toString());
+    }
+
+    @Test
+    public void testAppendToTheEndOfLinkedList() {
+
+        linkedListTest.append(0);
+        String expected = "{ 4 } -> { 3 } -> { 2 } -> { 1 } -> { 0 } -> NULL";
+
+        assertEquals(expected, linkedListTest.toString());
+    }
+    
+    @Test public void testMultipleAppendToTheEndOfTheLinkedList() {
+        linkedListTest.append(1);
+        linkedListTest.append(22);
+        linkedListTest.append(45);
+        String expected = "{ 4 } -> { 3 } -> { 2 } -> { 1 } -> { 1 } -> { 22 } -> { 45 } -> NULL";
+
         assertEquals(expected, linkedListTest.toString());
     }
 }

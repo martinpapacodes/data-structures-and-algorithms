@@ -4,15 +4,17 @@ import java.util.NoSuchElementException;
 
 public class LinkedList {
     Node head;
+    Node tail;
 
     public LinkedList() {
-
         head = null;
+        tail = null;
     }
     public boolean isEmpty() {
 
         return head == null;
     }
+
     public void insert(int value) {
 
         Node newNode = new Node(value);
@@ -52,5 +54,17 @@ public class LinkedList {
             current = current.nextNode;
         }
         return result + "NULL";
+    }
+
+    /////////////////// Code Challenge: Class 06
+
+    public void append(int value) {
+        Node current = head;
+        var endNode = new Node(value);
+
+        while(current.nextNode != null) {
+            current = current.nextNode;
+        }
+        current.nextNode = endNode;
     }
 }
