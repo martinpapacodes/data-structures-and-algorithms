@@ -12,8 +12,6 @@ public class LinkedListTest {
         linkedListTest.insert(1);
         linkedListTest.insert(2);
         linkedListTest.insert(3);
-        linkedListTest.insert(4);
-//        linkedListTest.append(5);
 
     }
     @Test
@@ -58,7 +56,7 @@ public class LinkedListTest {
         String expected = "{ 4 } -> { 3 } -> { 2 } -> { 1 } -> NULL";
         assertEquals(expected, linkedListTest.toString());
     }
-
+    /////////////////// Code Challenge: Class 06 Test
     @Test
     public void testAppendToTheEndOfLinkedList() {
 
@@ -68,7 +66,8 @@ public class LinkedListTest {
         assertEquals(expected, linkedListTest.toString());
     }
     
-    @Test public void testMultipleAppendToTheEndOfTheLinkedList() {
+    @Test 
+    public void testMultipleAppendToTheEndOfTheLinkedList() {
         linkedListTest.append(1);
         linkedListTest.append(22);
         linkedListTest.append(45);
@@ -76,4 +75,34 @@ public class LinkedListTest {
 
         assertEquals(expected, linkedListTest.toString());
     }
+    
+    @Test 
+    public void testInsertANodeBeforeANode() {
+
+        String expected = "{ 3 } -> { 100 } -> { 2 } -> { 1 } -> NULL";
+        linkedListTest.insertBefore(2, 100);
+        assertEquals(expected, linkedListTest.toString());
+    }
+
+    @Test
+    public void testInsertANodeBeforeFirstNode() {
+
+        linkedListTest.insert(20);
+        String expected = "{ 20 } -> { 3 } -> { 2 } -> { 1 } -> NULL";
+
+        assertEquals(expected, linkedListTest.toString());
+    }
+    @Test
+    public void testInsertANodeAfterANode() {
+        String expected = "{ 3 } -> { 2 } -> { 45 } -> { 1 } -> NULL";
+        linkedListTest.insertAfter(2,45);
+       assertEquals(expected, linkedListTest.toString());
+    }
+
+    @Test public void testInsertAfterTheLastNode() {
+        String expected ="{ 3 } -> { 2 } -> { 1 } -> { 555 } -> NULL";
+        linkedListTest.append(555);
+        assertEquals(expected, linkedListTest.toString());
+    }
+
 }

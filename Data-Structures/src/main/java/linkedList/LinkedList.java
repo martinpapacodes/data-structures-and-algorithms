@@ -67,4 +67,38 @@ public class LinkedList {
         }
         current.nextNode = endNode;
     }
+
+    public void insertBefore(int insertBeforeThisValue, int newValue) {
+        Node current = head;
+
+        while(current.nextNode != null) {
+
+            if(current.nextNode.value == insertBeforeThisValue) {
+                var newNode = new Node(newValue);
+                newNode.nextNode = current.nextNode;
+                current.nextNode = newNode;
+             return;
+            }
+            current = current.nextNode;
+
+        }
+    }
+
+    public void insertAfter(int insertAfterThisValue, int valueToBeInserted) {
+
+        Node current = head;
+
+
+        while(current != null) {
+
+            if(current.value == insertAfterThisValue) {
+                var newNode = new Node(valueToBeInserted);
+                newNode.nextNode = current.nextNode;
+                current.nextNode = newNode;
+            }
+            current = current.nextNode;
+
+        }
+    }
+
 }
