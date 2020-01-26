@@ -55,6 +55,8 @@ Linked list insertion
 
 ![whiteboard-image](assets/ll-insertion.jpg)
 
+---
+
 ### Code Challenge: Class 07 
 
 #### Linked List (kthFromEnd(k))
@@ -62,7 +64,6 @@ k-th value from the end of a linked list
 
 [Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/linkedList/LinkedList.java)
                                          
-
 #### Challenge
 
     Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.`
@@ -73,7 +74,29 @@ This method is going to have an O(n) depends on the length of the Linked List.
 #### Solution
 
 ![whiteboard-image](assets/kthFromEnd.jpg)
+
 ---
+
+### Code Challenge: Class 08
+
+#### Linked List(merge)
+Merge two linked list
+
+[Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/linkedList/LinkedList.java)
+                                         
+#### Challenge
+
+    Write a function called mergeLists which takes two linked lists as arguments. Zip the two linked lists together into one so that the nodes alternate between the two lists and return a reference to the head of the zipped list. Try and keep additional space down to O(1). You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+    
+#### Approach & Efficiency
+The merge itself has an o(n) because it has to traverse through both list, while the space is O(1) because it is returning one list.
+
+#### Solution
+
+![whiteboard-image](assets/ll-merge.jpg)
+
+---
+
 ## Stack and Queue
 
 ### Lab 10: Stack and Queue Implementation 

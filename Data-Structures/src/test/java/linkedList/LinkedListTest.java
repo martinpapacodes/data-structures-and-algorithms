@@ -138,4 +138,21 @@ public class LinkedListTest {
         assertEquals(2, linkedListTest.kthFromEnd(1));
     }
 
+    @Test
+    public void testLinkedListMerge() {
+        var listOne = new LinkedList();
+        listOne.insert(2);
+        listOne.insert(3);
+        listOne.insert(1);
+
+        var listTwo = new LinkedList();
+        listTwo.insert(4);
+        listTwo.insert(9);
+        listTwo.insert(5);
+
+        String expected =  "{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL";
+        assertEquals(expected, linkedListTest.mergeLists(listOne, listTwo).toString());
+
+    }
+
 }

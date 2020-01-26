@@ -128,4 +128,28 @@ public class LinkedList {
 
 }
 
+    /////////////////// Code Challenge: Class 08
+
+    public LinkedList mergeLists(LinkedList listOne, LinkedList listTwo) {
+
+        if(listOne.head == null) return listTwo;
+        if(listTwo.head == null) return listOne;
+
+        Node first = listOne.head;
+        Node second = listTwo.head;
+
+        while (first.nextNode != null) {
+            listTwo.head = second.nextNode;
+            second.nextNode = first.nextNode;
+            first.nextNode = second;
+            first = second.nextNode;
+            second = listTwo.head;
+        }
+
+        first.nextNode = second;
+        return listOne;
+
+
+    }
+
 }
