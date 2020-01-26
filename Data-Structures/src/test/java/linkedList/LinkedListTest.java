@@ -1,5 +1,6 @@
 package linkedList;
 
+import org.apache.commons.math3.exception.OutOfRangeException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -56,7 +57,7 @@ public class LinkedListTest {
         String expected = "{ 4 } -> { 3 } -> { 2 } -> { 1 } -> NULL";
         assertEquals(expected, linkedListTest.toString());
     }
-    /////////////////// Code Challenge: Class 06 Test
+    //////////////////// Code Challenge: Class 06 Test
     @Test
     public void testAppendToTheEndOfLinkedList() {
 
@@ -99,10 +100,42 @@ public class LinkedListTest {
        assertEquals(expected, linkedListTest.toString());
     }
 
-    @Test public void testInsertAfterTheLastNode() {
+    @Test
+    public void testInsertAfterTheLastNode() {
         String expected ="{ 3 } -> { 2 } -> { 1 } -> { 555 } -> NULL";
         linkedListTest.append(555);
         assertEquals(expected, linkedListTest.toString());
+    }
+
+    //////////////////// Code Challenge: Class 07 Test
+
+    @Test (expected = OutOfRangeException.class)
+    public void testWhereKIsGreaterThanLengthOfLinkedList()   {
+        linkedListTest.kthFromEnd(65);
+    }
+
+    @Test
+    public void testWhereKAndLengthOfTheListAreSame() {
+        int expected = 3;
+        assertEquals(3, linkedListTest.kthFromEnd(3));
+    }
+    
+    @Test (expected = NullPointerException.class)
+    public void testWhereKIsNotAPositiveInteger() {
+        linkedListTest.kthFromEnd(-3);
+    }
+
+    @Test
+    public void testWhereLinkedListIsOfSizeOne() {
+        var test = new LinkedList();
+        test.insert(100);
+
+        assertEquals(100, test.kthFromEnd(0));
+    }
+
+    @Test
+    public void testHappyPathWhereKIsNotAtTheEnd() {
+        assertEquals(2, linkedListTest.kthFromEnd(1));
     }
 
 }
