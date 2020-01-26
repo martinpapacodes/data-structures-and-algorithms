@@ -1,5 +1,8 @@
 package linkedList;
 
+import javafx.scene.effect.Blend;
+import org.apache.commons.math3.exception.OutOfRangeException;
+
 import java.util.NoSuchElementException;
 
 public class LinkedList {
@@ -100,5 +103,29 @@ public class LinkedList {
 
         }
     }
+
+    /////////////////// Code Challenge: Class 07
+
+    public int kthFromEnd(int k) {
+        Node current = head;
+        Node temp = head;
+        int length = 0;
+        if (k < 0 ) throw new NullPointerException();
+        while(current != null) {
+
+            current = current.nextNode;
+            length++;
+        }
+        // OutOfRangeException(Number wrong, Number lo, Number hi)
+        if(length < k) throw new OutOfRangeException(k, 0, length);
+
+        int newLength = length - k;
+        for(int i = 1; i < newLength; i++) {
+            temp = temp.nextNode;
+        }
+
+        return temp.value;
+
+}
 
 }

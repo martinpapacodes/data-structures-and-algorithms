@@ -5,9 +5,10 @@
 ### Lab 05: Linked List Implementation 
 
 #### Singly Linked List
-Implement A Singly Linked List (
+Implement A Singly Linked List
+
 [Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/linkedList/LinkedList.java)
-)
+
 #### Challenge
 
     Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
@@ -34,9 +35,10 @@ Implement A Singly Linked List (
 ### Code Challenge: Class 06 
 
 #### Linked List Insertion
-Linked list insertion (
+Linked list insertion
+
 [Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/linkedList/LinkedList.java)
-)
+
 #### Challenge
 
     Write the following methods for the Linked List class:
@@ -53,6 +55,24 @@ Linked list insertion (
 
 ![whiteboard-image](assets/ll-insertion.jpg)
 
+### Code Challenge: Class 07 
+
+#### Linked List (kthFromEnd(k))
+k-th value from the end of a linked list
+
+[Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/linkedList/LinkedList.java)
+                                         
+
+#### Challenge
+
+    Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.`
+
+#### Approach & Efficiency
+This method is going to have an O(n) depends on the length of the Linked List.
+
+#### Solution
+
+![whiteboard-image](assets/kthFromEnd.jpg)
 ---
 ## Stack and Queue
 
