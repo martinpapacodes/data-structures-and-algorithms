@@ -8,6 +8,7 @@ import static org.junit.Assert.*;
 
 public class LinkedListTest {
     LinkedList linkedListTest = new LinkedList();
+    //Remind to self: Dont add anything in the @Before
     @Before
     public void setUp() throws Exception {
         linkedListTest.insert(1);
@@ -137,6 +138,8 @@ public class LinkedListTest {
     public void testHappyPathWhereKIsNotAtTheEnd() {
         assertEquals(2, linkedListTest.kthFromEnd(1));
     }
+
+
 
     @Test
     public void testLinkedListMerge() {
