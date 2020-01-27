@@ -54,7 +54,7 @@ public class LinkedListTest {
     }
     @Test
     public void testToString() {
-        String expected = "{ 4 } -> { 3 } -> { 2 } -> { 1 } -> NULL";
+        String expected = "{ 3 } -> { 2 } -> { 1 } -> NULL";
         assertEquals(expected, linkedListTest.toString());
     }
     //////////////////// Code Challenge: Class 06 Test
@@ -62,7 +62,7 @@ public class LinkedListTest {
     public void testAppendToTheEndOfLinkedList() {
 
         linkedListTest.append(0);
-        String expected = "{ 4 } -> { 3 } -> { 2 } -> { 1 } -> { 0 } -> NULL";
+        String expected = "{ 3 } -> { 2 } -> { 1 } -> { 0 } -> NULL";
 
         assertEquals(expected, linkedListTest.toString());
     }
@@ -72,7 +72,7 @@ public class LinkedListTest {
         linkedListTest.append(1);
         linkedListTest.append(22);
         linkedListTest.append(45);
-        String expected = "{ 4 } -> { 3 } -> { 2 } -> { 1 } -> { 1 } -> { 22 } -> { 45 } -> NULL";
+        String expected = "{ 3 } -> { 2 } -> { 1 } -> { 1 } -> { 22 } -> { 45 } -> NULL";
 
         assertEquals(expected, linkedListTest.toString());
     }
