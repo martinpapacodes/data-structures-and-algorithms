@@ -1,7 +1,7 @@
 package tree;
 
 
-public class BinarySearchTree extends Tree{
+public class BinarySearchTree {
     public Node root;
 
     public void add(int value) {
