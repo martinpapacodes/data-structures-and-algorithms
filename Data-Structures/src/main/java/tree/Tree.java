@@ -1,71 +1,58 @@
 package tree;
 
+import java.util.ArrayList;
+// Inspiration : https://www.youtube.com/watch?v=M6lYob8STMI
 public class Tree {
 
     public Node root;
 
-    public void add(int value) {
-        var newNode = new Node(value);
-
-        if(root == null) {
-            root = newNode;
-        } else {
-            Node otherNode = root;
-
-            Node parent;
-
-            while(true) {
-                parent = otherNode;
-                if(value < otherNode.value) {
-                    otherNode = otherNode.left;
-                    if(otherNode == null) {
-                        parent.left = newNode;
-                        return;
-                    }
-                } else {
-                    otherNode = otherNode.right;
-                    if(otherNode == null) {
-                        parent.right = newNode;
-                        return;
-                    }
-                }
-
-            }
-
-        }
-
+    public Tree() {
+        this.root = null;
     }
-    public void inOrder(Node node) {
+
+    public ArrayList<Integer> inOrder(Node node) {
+        var inOrderList = new ArrayList<Integer>();
         if (node != null) {
-            inOrder(node.left);
-            System.out.println(node.value);
+            var left = inOrder(node.left);
+            inOrderList.addAll(left);
 
-            inOrder(node.right);
+            inOrderList.add(node.value);
+
+            var right =  inOrder(node.right);
+            inOrderList.addAll(right);
         }
+        return inOrderList;
     }
 
-    public void preOrder(Node node) {
+    public ArrayList<Integer> preOrder(Node node) {
+        var preOrderList = new ArrayList<Integer>();
         if (node != null) {
+            preOrderList.add(node.value);
 
-            System.out.println(node.value);
-            preOrder(node.left);
+            var left = preOrder(node.left);
+            preOrderList.addAll(left);
 
 
-            preOrder(node.right);
+            var right = preOrder(node.right);
+            preOrderList.addAll(right);
         }
+        return preOrderList;
     }
 
-    public void postOrder(Node node) {
+    public ArrayList<Integer> postOrder(Node node) {
+        var postOrderList = new ArrayList<Integer>();
         if (node != null) {
 
 
-            postOrder(node.left);
+            var left = postOrder(node.left);
+            postOrderList.addAll(left);
 
+            var right = postOrder(node.right);
+            postOrderList.addAll(right);
 
-            postOrder(node.right);
-            System.out.println(node.value);
+            postOrderList.add(node.value);
         }
 
-
+        return postOrderList;
     }
 }

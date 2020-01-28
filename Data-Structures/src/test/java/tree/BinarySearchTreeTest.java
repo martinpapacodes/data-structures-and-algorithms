@@ -24,7 +24,7 @@ public class BinarySearchTreeTest {
         newTree.add(75);
         newTree.add(85);
 
-        newTree.postOrder(newTree.root);
+//        newTree.postOrder(newTree.root);
         System.out.println("newTree.contains(100) = " + newTree.contains(100));
 
 
