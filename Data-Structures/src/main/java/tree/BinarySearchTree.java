@@ -1,8 +1,8 @@
 package tree;
 
 
-public class BinarySearchTree {
-    public Node root;
+public class BinarySearchTree extends Tree {
+
 
     public void add(int value) {
         var newNode = new Node(value);

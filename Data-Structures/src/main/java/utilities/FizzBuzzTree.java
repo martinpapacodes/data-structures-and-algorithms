@@ -1,38 +1,64 @@
 package utilities;
 
-import com.sun.source.tree.BinaryTree;
-import tree.Node;
-import tree.Tree;
 
-import java.util.ArrayList;
+public class FizzBuzzTree<T> {
 
+    public Node<T> root;
 
-public class FizzBuzzTree {
-
-
-    public Tree<String> FizzBuzz(Tree<String> original) {
-        Tree<String> sapling = new Tree<String>();
-        sapling.root = traverse(original.root);
-
-
-        //fulfills returning the new tree
-        return sapling;
+    public FizzBuzzTree(Node<T> root) {
+        this.root = root;
 
     }
 
-    public Node<String> traverse(Node<String> me) {
-        if(me == null) {
+    public FizzBuzzTree() {
+        this.root = null;
+    }
+
+    public static class Node<T> {
+        public T value;
+        Node<T> left, right;
+
+        public Node(T value, Node<T> left, Node<T> right) {
+            this.value = value;
+            this.left = left;
+            this.right = right;
+        }
+        public Node(T value) {
+            this.value = value;
+            this.left = this.right = null;
+        }
+
+        public Node(){
+            left = right = null;
+            this.value = null;
+
+        }
+    }
+
+    public static FizzBuzzTree<String> fizzBuzzTree(FizzBuzzTree<String> tree) {
+
+        FizzBuzzTree otherTree = new FizzBuzzTree();
+        otherTree.root = traverse(tree.root);
+
+
+        //fulfills returning the new tree
+        return otherTree;
+
+    }
+
+    public static Node<String> traverse(Node<String> current) {
+        if(current == null) {
             return null;
         }
 
-        Node leftNodes = traverse(me.left);
-        Node rightNodes = traverse(me.right);
+        Node<String> leftNodes = traverse(current.left);
+        Node<String> rightNodes = traverse(current.right);
 
-        System.out.println(me.value);
+        System.out.println(current.value);
 
 
-        Node<String> newNode = new Node();
-        newNode.value = fizzBuzz(me.value);
+        Node<String> newNode = new Node<>();
+        newNode.value = fizzBuzz(current.value);
 
 
         newNode.left = leftNodes;
@@ -40,15 +66,9 @@ public class FizzBuzzTree {
 
         return newNode;
 
-
-
-
-
-
     }
 
-
-    private String fizzBuzz(String number) {
+    private static String fizzBuzz(String number) {
         int num = Integer.parseInt(number);
         if(num % 15 == 0) {
             return "fizzBuzz";
