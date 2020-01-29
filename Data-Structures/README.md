@@ -218,3 +218,22 @@ fizzBuzzTree:
 #### API
 ![whiteboard-image](assets/FizzBuzzTree.jpg)
 ---
+
+###  Code Challenge: Class 17
+#### Breadth First Traversal
+Breadth-first Traversal
+
+
+[Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/tree/Tree.java)
+
+
+#### Challenge
+
+    
+    Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+#### Approach & Efficiency
+* This method uses an O(n) because it has to traverse through every single node in the tree.
+
+#### API
+![whiteboard-image](assets/breadthFirst.jpg)
