@@ -21,6 +21,7 @@ public class TreeTest {
         treeTest.root.left.right = new Node(50);
 
 
+
     }
     @Test
     public void testInstantiateAnEmptyTree() {
@@ -58,4 +59,19 @@ public class TreeTest {
     public void postOrder() {
         assertEquals("[40, 50, 20, 30, 10]", treeTest.postOrder(treeTest.root).toString() );
     }
+
+
+    /////////// Code Challenge: Class 18 Tests
+    @Test
+    public void testForMaxValue() {
+        treeTest.root.left.right = new Node(800);
+        assertEquals(800, treeTest.findMaximumValue(treeTest.root));
+    }
+
+    @Test public void testForMaxValue2() {
+        treeTest.root.left.right = new Node(999999);
+        assertEquals(999999, treeTest.findMaximumValue(treeTest.root));
+    }
 }
+
+

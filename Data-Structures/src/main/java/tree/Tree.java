@@ -81,4 +81,26 @@ public class Tree {
 //
 //
 //        }
+/////////// Code Challenge: Class 18
+// Inspiration :  https://www.geeksforgeeks.org/find-maximum-or-minimum-in-binary-tree/
+    public int findMaximumValue(Node node) {
+
+        if (node == null) {
+            return Integer.MIN_VALUE;
+        }
+
+        int max = node.value;
+        int leftMax = findMaximumValue(node.left);
+        int rightMax = findMaximumValue(node.right);
+
+        if(leftMax > max) {
+            max = leftMax;
+        }
+        if(rightMax > max) {
+            max = rightMax;
+        }
+
+        return max;
+
+    }
 }
