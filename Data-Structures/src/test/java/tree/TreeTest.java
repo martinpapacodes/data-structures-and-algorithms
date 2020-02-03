@@ -19,9 +19,6 @@ public class TreeTest {
         treeTest.root.right = new Node(30);
         treeTest.root.left.left = new Node(40);
         treeTest.root.left.right = new Node(50);
-
-
-
     }
     @Test
     public void testInstantiateAnEmptyTree() {
@@ -60,7 +57,12 @@ public class TreeTest {
         assertEquals("[40, 50, 20, 30, 10]", treeTest.postOrder(treeTest.root).toString() );
     }
 
+    /////////// Code Challenge: Class 17 Tests
 
+    @Test
+    public void testBreadthFirst() {
+        assertEquals( "10 20 30 40 50 ",treeTest.breadthFirstTraversal(treeTest.root));
+    }
     /////////// Code Challenge: Class 18 Tests
     @Test
     public void testForMaxValue() {
