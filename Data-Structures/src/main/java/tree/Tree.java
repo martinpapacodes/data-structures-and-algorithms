@@ -59,30 +59,32 @@ public class Tree {
 
         return postOrderList;
     }
-//    Queue<Node> q = new LinkedList<Node>();
-//		if (root == null)
-//            return;
-//		q.add(root);
-//		while (!q.isEmpty()) {
-//        Node n = (Node) q.remove();
-//        System.out.print(" " + n.data);
-//        if (n.left != null)
-//            q.add(n.left);
-//        if (n.right != null)
-//            q.add(n.right);
-//
-//        public void breadthFirstTraversal(Node node) {
-//            Queue<Node> queue = new LinkedList<Node>();
-//            queue.add(node);
-//
-//            while(queue.isEmpty()) {
-//                node
-//            }
-//
-//
-//        }
-/////////// Code Challenge: Class 18
-// Inspiration :  https://www.geeksforgeeks.org/find-maximum-or-minimum-in-binary-tree/
+
+    /////////// Code Challenge: Class 17
+    //    Inspiration: https://www.youtube.com/watch?v=Kfm00t4YKow&t=100s
+        public String breadthFirstTraversal(Node node) {
+            Queue<Node> queue = new LinkedList<Node>();
+            String result ="";
+            queue.add(node);
+
+
+
+            while(!queue.isEmpty()) {
+                node = queue.remove();
+                result += node.value + " ";
+
+                if(node.left != null){
+                    queue.add(node.left);
+                }
+
+                if(node.right != null) {
+                    queue.add(node.right);
+                }
+            }
+            return result;
+        }
+    /////////// Code Challenge: Class 18
+    // Inspiration :  https://www.geeksforgeeks.org/find-maximum-or-minimum-in-binary-tree/
     public int findMaximumValue(Node node) {
 
         if (node == null) {
