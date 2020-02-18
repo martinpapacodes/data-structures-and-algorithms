@@ -258,3 +258,29 @@ Find the Maximum Value in a Binary Tree
 #### API
 ![whiteboard-image](assets/findMaxValue.jpg)
 ---
+
+### Code Challenge: Class 30
+#### Hash Table Implementation 
+Implement a Hash Table
+
+[Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/hashtable/Hashtable.java)
+
+#### Challenge
+
+    Implement a Hashtable with the following methods:
+
+    add: takes in both the key and value. This method should hash the key, and add the key and value pair to the table, handling collisions as needed.
+    get: takes in the key and returns the value from the table.
+    contains: takes in the key and returns a boolean, indicating if the key exists in the table already.
+    hash: takes in an arbitrary key and returns an index in the collection.
+
+#### Approach & Efficiency
+* Worst Case:
+    * If items on a hash table were hashed into similar (collision), searching will take an O(N).
+#### API
+* add - add a node to the hash table
+* get - retrieve a node with a key. If not present, return a null. 
+* contains - retrieves a node. If present, return true otherwise false. 
+* hash - hash a key using Bob Jenkin's hashing function. [Jenkins' Hash Function](https://en.wikipedia.org/wiki/Jenkins_hash_function)
+* displayHashTable - display all element within the hash table.
+---
