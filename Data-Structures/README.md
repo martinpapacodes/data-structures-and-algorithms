@@ -329,7 +329,7 @@ Find the Maximum Value in a Binary Tree
         arr[i] <-- arr[low]
         arr[low] <-- temp
 
-[Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/sort/MergeSort.java)
+[Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/sort/QuickSort.java)
 
 #### Challenge
 
@@ -339,7 +339,7 @@ Find the Maximum Value in a Binary Tree
 
 #### Solution
 
-[Blog](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/sort/MergeBlog.md)
+[Blog](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/sort/QuickBlog.md)
 
 ---
 
