@@ -369,6 +369,29 @@ Find the Maximum Value in a Binary Tree
    * displayHashTable - display all element within the hash table.
    ---
    
+      
+  ### Code Challenge: Class 32
+  #### First Repeated Word
+    Find the first repeated word in a book.
+      
+   [Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/repeatedWord/RepeatedWord.java)
+      
+  #### Challenge
+      
+    Write a function that accepts a lengthy string parameter.
+    Without utilizing any of the built-in library methods available to your language, return the first word to occur more than once in that provided string.
+
+      
+  #### Approach & Efficiency
+  * Implemented HashMap to store strings and keep track of frequency
+  
+  * Time: O(N)
+  * Space: O(N)    
+  
+      
+  #### API
+  ![whiteboard-image](assets/MostRepeatedWord.jpg)
+   
    ### Code Challenge: Class 35
    #### Graph Implementation
    Implement a Hash Table
