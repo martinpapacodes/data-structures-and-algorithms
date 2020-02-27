@@ -367,8 +367,8 @@ Find the Maximum Value in a Binary Tree
    * contains - retrieves a node. If present, return true otherwise false. 
    * hash - hash a key using Bob Jenkin's hashing function. [Jenkins' Hash Function](https://en.wikipedia.org/wiki/Jenkins_hash_function)
    * displayHashTable - display all element within the hash table.
-   ---
    
+   ---
       
   ### Code Challenge: Class 32
   #### First Repeated Word
@@ -391,6 +391,36 @@ Find the Maximum Value in a Binary Tree
       
   #### API
   ![whiteboard-image](assets/MostRepeatedWord.jpg)
+  
+  ---
+        
+  ### Code Challenge: Class 33
+  
+  #### Tree Intersection
+  
+  Find common values in 2 binary trees. 
+  
+  [Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/treeIntersection/TreeIntersection.java)
+        
+  #### Challenge
+        
+     
+    Write a function called tree_intersection that takes two binary tree parameters.
+    Without utilizing any of the built-in library methods available to your language, return a set of values found in both trees.
+
+  
+        
+  #### Approach & Efficiency
+   * Implemented Hashset to return unique values between two binary trees.
+    
+  * Time: O(N)
+  * Space: O(N)    
+    
+        
+  #### API
+   ![whiteboard-image](assets/TreeIntersection.jpg)
+   
+   ---
    
    ### Code Challenge: Class 35
    #### Graph Implementation
