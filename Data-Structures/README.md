@@ -476,9 +476,10 @@ Implement a breadth-first traversal on a graph.
       
  #### Approach & Efficiency
  * Worst Case:
-          * Time: O(N)
-          * Space: O(N) **Returning a set of nodes**
+    * Time: O(N)
+          
+    * Space: O(N) **Returning a set of nodes**
  #### API
-   ![whiteboard-image](assets/TreeIntersection.jpg)
+   ![whiteboard-image](assets/GraphBreadthFirst.jpg)
       
    
