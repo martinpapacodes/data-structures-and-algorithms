@@ -1,39 +1,44 @@
 package graph;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Graph {
 
-    private Map<Node, List<Node>> adjacentNodes;
-    int size;
+    Set<Node> nodes;
 
-
-    public void addNode(String person) {
-        adjacentNodes.putIfAbsent(new Node(person), new ArrayList<>());
-        size++;
+    public Graph() {
+        nodes = new HashSet<>();
+        if(nodes.size() == 0) {
+            nodes.add(null);
+        }
     }
 
-    public void addEdge(String person, String anotherPerson) {
-        Node node  = new Node(person);
-        Node anotherNode = new Node(anotherPerson);
-        adjacentNodes.get(node).add(anotherNode);
-        adjacentNodes.get(anotherNode).add(node);
-        size++;
-        size++;
+    public Node addNode(String name) {
+        Node newNode = new Node(name);
+        nodes.add(newNode);
+
+    return newNode;
     }
 
-    public List<Node> getNodes(String person){
-        return adjacentNodes.get(new Node(person));
-    }
-
-    public void getNeighbors() {
+    public void addEdge(int weight, Node nodeOne, Node nodeTwo) {
+        nodeOne.edges.add(new Edge(weight, nodeTwo));
+        nodeTwo.edges.add(new Edge(weight, nodeOne));
 
 
     }
 
-    public  void size() {
+    public Set<Node> getNodes() {
+        return nodes;
+    }
+
+    public List<Edge> getNeighbors(Node node) {
+        return node.edges;
 
     }
+
+    public int size() {
+       return nodes.size();
+    }
+
+
 }
