@@ -453,7 +453,8 @@ Find the Maximum Value in a Binary Tree
    
    #### Approach & Efficiency
    * Worst Case:
-       * If items on a hash table were hashed into similar (collision), searching will take an O(N).
+       * Time: O(N)
+       * Space: O(N) **Returning a set of nodes**
    #### API
    * AddNode() - adds new node to the graph
    * AddEdge() - adds new edge between to nodes

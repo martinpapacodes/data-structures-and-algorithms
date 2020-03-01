@@ -1,22 +1,15 @@
-package breadthFirst;
-
 import graph.Edge;
 import graph.Node;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
+import java.util.*;
 
-public class BreadthFirst {
+public class depthFirst {
 
-
-
-    public static LinkedList<Node> breadthFirst(Node node) {
+    public static LinkedList<Node> depthFirst(Node node) {
 
 
         LinkedList<Node> answers = new LinkedList<>();
-        Queue<Node> stuffToSee = new LinkedList<Node>();
+        Stack<Node> stuffToSee = new Stack<>();
         Set<Node> stuffIHaveSeen = new HashSet<>();
 
         stuffToSee.add(node);
@@ -24,7 +17,7 @@ public class BreadthFirst {
 
         while(!stuffToSee.isEmpty()) {
 
-            Node currentNode = stuffToSee.poll();
+            Node currentNode = stuffToSee.pop();
             if(currentNode != null) {
                 for(Edge edge : currentNode.edges) {
                     if(!stuffIHaveSeen.contains(edge.next)) {
@@ -43,4 +36,3 @@ public class BreadthFirst {
         return answers;
     }
 }
-
