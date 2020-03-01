@@ -463,3 +463,22 @@ Find the Maximum Value in a Binary Tree
    * Size()  - returns the total number of nodes in the graph
    ---
    
+### Code Challenge: Class 36 
+#### Breadth First Traversal
+Implement a breadth-first traversal on a graph.
+      
+ [Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/breadthFirst/BreadthFirst.java)
+      
+ #### Challenge
+      
+        Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
+   
+      
+ #### Approach & Efficiency
+ * Worst Case:
+          * Time: O(N)
+          * Space: O(N) **Returning a set of nodes**
+ #### API
+   ![whiteboard-image](assets/TreeIntersection.jpg)
+      
+   
