@@ -18,4 +18,8 @@ public class Node {
                 "name='" + name + '\'' +
                 '}';
     }
+
+    public String display() {
+        return name + ',';
+    }
 }
