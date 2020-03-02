@@ -481,5 +481,44 @@ Implement a breadth-first traversal on a graph.
     * Space: O(N) **Returning a set of nodes**
  #### API
    ![whiteboard-image](assets/GraphBreadthFirst.jpg)
-      
    
+      ---
+      
+### Code Challenge: Class 37
+#### Get Edge
+Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?
+         
+[Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/getEdge/GetEdge.java)
+         
+#### Challenge
+         
+           Write a function based on the specifications above, which takes in a graph, and an array of city names. Without utilizing any of the built-in methods available to your language, return whether the full trip is possible with direct flights, and how much it would cost.ss
+      
+         
+ #### Approach & Efficiency
+ * Worst Case:
+    * Time: O(N)
+    * Space: O(N) **Returning a set of nodes**
+    
+  #### API
+  ![whiteboard-image](assets/GraphBreadthFirst.jpg)
+  ---    
+ 
+ ### Code Challenge: Class 38
+ #### Depth First Traversal
+ Conduct a depth first preorder traversal on a graph
+          
+ [Code](https://github.com/martinpapacodes/data-structures-and-algorithms/blob/master/Data-Structures/src/main/java/depthFirst/DepthFirst.java)
+          
+ #### Challenge
+          
+            Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+          
+  #### Approach & Efficiency
+  * Worst Case:
+     * Time: O(N)
+     * Space: O(N) **Returning a set of nodes**
+     
+   #### API
+   ![whiteboard-image](assets/DepthFirstGraph.jpg)
+   ---    

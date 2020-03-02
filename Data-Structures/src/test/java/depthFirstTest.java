@@ -1,9 +1,7 @@
-import breadthFirst.BreadthFirst;
+import depthFirst.DepthFirst;
 import graph.Graph;
 import graph.Node;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class depthFirstTest {
 
@@ -21,7 +19,7 @@ public class depthFirstTest {
         testGraph.addEdge(100, seaTac, slc);
         testGraph.addEdge(100, slc, vegas);
 
-        System.out.println(depthFirst.depthFirst(vancouver).toString());
+        System.out.println(DepthFirst.depthFirst(vancouver).toString());
 
     }
 }

@@ -1,9 +1,11 @@
+package depthFirst;
+
 import graph.Edge;
 import graph.Node;
 
 import java.util.*;
 
-public class depthFirst {
+public class DepthFirst {
 
     public static LinkedList<Node> depthFirst(Node node) {
 
