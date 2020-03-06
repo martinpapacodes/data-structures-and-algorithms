@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Node {
-    String name;
+    public String name;
     public List<Edge> edges;
 
     Node(String person) {
