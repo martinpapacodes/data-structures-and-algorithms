@@ -7,10 +7,8 @@ public class Graph {
     Set<Node> nodes;
 
     public Graph() {
-        nodes = new HashSet<>();
-        if(nodes.size() == 0) {
-            nodes.add(null);
-        }
+        this.nodes = new HashSet<Node>();
+
     }
 
     public Node addNode(String name) {
